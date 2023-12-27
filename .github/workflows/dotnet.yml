@@ -24,3 +24,9 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
+    - name: Upload Build Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: Application_Artifact
+        path: /home/runner/work/LCVR/LCVR/bin/Debug/netstandard2.1/LCVR.dll
+
